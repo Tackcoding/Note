@@ -2,7 +2,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <a href="${pageContext.request.contextPath}/" class="navbar-brand">
-                <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> NavetteApp
+                <i class="fas fa-paper-plane" style="margin-right: 8px;"></i> TACK SCHOOL
             </a>
             <div class="navbar-nav">
                 <a href="${pageContext.request.contextPath}/notes" class="nav-link">
