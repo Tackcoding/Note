@@ -105,52 +105,61 @@
 
 
 
--- Correcteurs
 INSERT INTO Correcteur (nom) VALUES
     ('Correcteur1'),
     ('Correcteur2');
 
--- Matières
 INSERT INTO Matiere (nom) VALUES
-    ('JAVA'),   -- id 1
-    ('PHP');    -- id 2
+    ('JAVA'),
+    ('PHP');
 
--- Candidats
 INSERT INTO Candidat (nom, prenom, matricule) VALUES
     ('Candidat1', 'Prenom1', 'MAT-2024-001'),
     ('Candidat2', 'Prenom2', 'MAT-2024-002');
 
--- Résolutions
 INSERT INTO Resolution (nom) VALUES
-    ('plus grand'),   -- id 1
-    ('moyenne'),      -- id 2
-    ('plus petit');   -- id 3
+    ('plus grand'),
+    ('moyenne'),
+    ('plus petit');
 
--- Opérateurs
 INSERT INTO Operateur (nom) VALUES
-    ('<'),    -- id 1
-    ('>='),   -- id 2
-    ('<='),   -- id 3
-    ('>');    -- id 4
+    ('<'),
+    ('>='),
+    ('<='),
+    ('>');
 
--- Paramètres
 INSERT INTO Parametres (id_matiere, seuil, id_operateur, id_resolution) VALUES
-    (1, 3, 1, 1),  -- JAVA : sommeDiff < 3  → plus grand
-    (1, 3, 2, 2),  -- JAVA : sommeDiff >= 3 → moyenne
-    (2, 2, 3, 3),  -- PHP  : sommeDiff <= 2 → plus petit
-    (2, 2, 4, 1);  -- PHP  : sommeDiff > 2  → plus grand
+    (1, 3, 1, 1),
+    (1, 3, 2, 2),
+    (2, 2, 3, 3),
+    (2, 2, 4, 1);
 
--- Notes
 INSERT INTO Note (id_candidat, id_matiere, id_correcteur, note) VALUES
-    -- Candidat1 / JAVA
-    (1, 1, 1, 12),   -- Correcteur1
-    (1, 1, 2, 11),   -- Correcteur2
-    -- Candidat1 / PHP
-    (1, 2, 1, 7),    -- Correcteur1
-    (1, 2, 2, 11),   -- Correcteur2
-    -- Candidat2 / JAVA
-    (2, 1, 1, 13),   -- Correcteur1
-    (2, 1, 2, 10),   -- Correcteur2
-    -- Candidat2 / PHP
-    (2, 2, 1, 14),   -- Correcteur1
-    (2, 2, 2, 16);   -- Correcteur2
+    (1, 1, 1, 12),
+    (1, 1, 2, 11),
+    (1, 2, 1, 7),
+    (1, 2, 2, 11),
+    (2, 1, 1, 13),
+    (2, 1, 2, 10),
+    (2, 2, 1, 14),
+    (2, 2, 2, 16);
+
+INSERT INTO Correcteur (nom) VALUES ('Correcteur3');
+
+INSERT INTO Parametres (id_matiere, seuil, id_operateur, id_resolution) VALUES
+    (1, 7, 1, 2),
+    (1, 7, 4, 3),
+    (2, 2, 2, 1),
+    (2, 2, 3, 2);
+
+INSERT INTO Note (id_candidat, id_matiere, id_correcteur, note) VALUES
+    (1, 1, 1, 15),
+    (1, 1, 2, 10),
+    (1, 1, 3, 12),
+    (2, 1, 1, 9),
+    (2, 1, 2, 8),
+    (2, 1, 3, 11),
+    (1, 2, 1, 10),
+    (1, 2, 2, 10),
+    (2, 2, 1, 13),
+    (2, 2, 2, 11);
